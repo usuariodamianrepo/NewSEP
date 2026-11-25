@@ -1,0 +1,36 @@
+﻿@using SEP.Shared.DTOs
+@inherits FluentDialogInstance
+
+<FluentDialogBody>
+    <FluentLabel>@_Product.Description</FluentLabel>
+    <img src="@_ImgSrc" alt="@_Product.Name" width="400" height="400" />
+</FluentDialogBody>
+
+@code {
+    // A simple type is not updatable
+    [Parameter]
+    public string? _ImgSrc { get; set; }
+
+    // A class is updatable
+    [Parameter]
+    public ProductDto _Product { get; set; } = default!;
+
+    // Initialize the dialog
+    protected override void OnInitializeDialog(DialogOptionsHeader header, DialogOptionsFooter footer)
+    {
+        header.Title = $"{_Product.Name}";
+        footer.SecondaryAction.Visible = true;
+    }
+
+    protected override async Task OnActionClickedAsync(bool primary)
+    {
+        if (primary)
+        {
+            await DialogInstance.CloseAsync("Yes");
+        }
+        else
+        {
+            await DialogInstance.CancelAsync();
+        }
+    }
+}

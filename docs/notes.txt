@@ -1,0 +1,29 @@
+==========================================================zpl
+Página para armar archivos ZPL
+https://labelary.com/
+
+Librería
+	https://github.com/Fabrizz/zpl-renderer-js
+	https://xaviewer.fabriziob.com/
+
+==========================================================tpcl
+TOSHIBA
+https://www.toshibatec.com/
+
+Impresoras termicas Toshiba TEC utilizan de forma nativa el lenguaje TPCL (TEC Printer Command Language)
+https://www.softage.fr/tpcl-viewer/?lang=es
+
+
+Sí, existe el conversor online de zplCloud (ZPL a TPCL), diseñado específicamente para transformar etiquetas Zebra y enviarlas a impresoras Toshiba Tec.
+
+Cómo funciona y alternativas disponibles
+
+• Conversor web y CLI (zplCloud). Renderiza la etiqueta ZPL punto por punto y genera un archivo TPCL listo para enviarse directamente por puerto TCP 9100 o USB sin necesidad de instalar drivers. Incluye compresión TOPIX opcional y una herramienta de línea de comandos (CLI) para automatizar envíos.
+• Emulación nativa en la impresora. Muchos modelos modernos de impresoras Toshiba Tec (como las series B-FV4, B-EX4 o BA400) incorporan el modo de emulación Z-Mode en su firmware, permitiéndoles interpretar código ZPL directamente sin convertirlo antes.
+• Flujo intermedio vía PDF o imagen. Si necesitas editar el diseño o automatizarlo desde otro sistema, puedes usar una API como Labelary o el conversor de ZPLPDF para pasar el código ZPL a PDF/PNG, e imprimirlo luego usando el controlador estándar de Windows de tu impresora Toshiba.
+Si me indicas el modelo exacto de tu impresora Toshiba Tec o si buscas automatizar la conversión por código, puedo darte los pasos exactos para configurarla o integrarla.
+
+
+https://zplcloud.com/
+
+

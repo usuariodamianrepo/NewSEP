@@ -1,0 +1,124 @@
+﻿@page "/flejes"
+@using SEP.Shared.DTOs
+@using SEP.FluentBlazor.Helpers;
+@using SEP.FluentBlazor.Services;
+
+@inject GetHttpClient HttpClientFactory
+
+<PageTitle>Flejes</PageTitle>
+
+<h1>Flejes</h1>
+
+<p>This component demonstrates how to use the <FluentLink Href="https://github.com/Fabrizz/zpl-renderer-js" Inline>ZPL-Renderer-JS</FluentLink> library.</p>
+
+@if (products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <FluentDataGrid Id="weathergrid" Items="@products" GridTemplateColumns="0.2fr 1fr 2fr 0.5fr auto" TGridItem=ProductDto>
+        <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="DataGridCellAlignment.Center" />
+        <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" />
+        <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" />
+        <PropertyColumn Title="Price" Property="@(c => c!.Price)" Sortable="true" Align="DataGridCellAlignment.End" />
+        <TemplateColumn Title="Actions" Align="@DataGridCellAlignment.End">
+            <FluentButton Title="ZPL Code" Appearance="ButtonAppearance.Subtle" IconEnd="@(new Icons.Regular.Size20.AppsListDetail())"
+                          OnClick="@(() => OnZplCode(context))" />
+            <FluentButton Title="Toshiba" Appearance="ButtonAppearance.Subtle" IconEnd="@(new Icons.Regular.Size20.BookCoins())"
+                          OnClick="@(() => OnToshibaCode(context))"/>
+        </TemplateColumn>
+    </FluentDataGrid>
+}
+
+@code {
+    private IQueryable<ProductDto>? products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SearchData();
+    }
+
+    private async void OnZplCode(ProductDto item)
+    {
+        Console.WriteLine($"Id: {item.Id} Label: {item.Name}");
+
+        var httpClient = HttpClientFactory.GetPublicHttpClient();
+        var response = await httpClient.GetAsync($"api/Products/{item.Id}/zpl-image");
+        response.EnsureSuccessStatusCode();
+
+        var bytes = await response.Content.ReadAsByteArrayAsync();
+        var base64 = Convert.ToBase64String(bytes);
+        var imgSrc = $"data:image/png;base64,{base64}";
+
+        var result = await DialogService.ShowDialogAsync<FlejeDialog>(options =>
+            {
+                options.Width = "640px";
+                options.Parameters.Add(nameof(FlejeDialog._ImgSrc), imgSrc);
+                options.Parameters.Add(nameof(FlejeDialog._Product), item);
+            });
+
+        if (result.Cancelled)
+        {
+            Console.WriteLine($"Dialog Canceled: {result.Value}");
+        }
+        else
+        {
+            Console.WriteLine($"Dialog Saved: {result.Value}");
+        }
+    }
+
+    private async void OnToshibaCode(ProductDto item)
+    {
+        Console.WriteLine($"Id: {item.Id} Label: {item.Name}");
+        var httpClient = HttpClientFactory.GetPublicHttpClient();
+        var response = await httpClient.GetAsync($"api/Products/{item.Id}/tpcl-image");
+        response.EnsureSuccessStatusCode();
+
+        var bytes = await response.Content.ReadAsByteArrayAsync();
+        var base64 = Convert.ToBase64String(bytes);
+        var imgSrc = $"data:image/png;base64,{base64}";
+
+        var result = await DialogService.ShowDialogAsync<FlejeDialog>(options =>
+            {
+                options.Width = "640px";
+                options.Parameters.Add(nameof(FlejeDialog._ImgSrc), imgSrc);
+                options.Parameters.Add(nameof(FlejeDialog._Product), item);
+            });
+        if (result.Cancelled)
+        {
+            Console.WriteLine($"Dialog Canceled: {result.Value}");
+        }
+        else
+        {
+            Console.WriteLine($"Dialog Saved: {result.Value}");
+        }
+    }
+
+    private async Task SearchData()
+    {
+        try
+        {
+            var httpClient = HttpClientFactory.GetPublicHttpClient();
+            var response = await httpClient.GetFromJsonAsync<IEnumerable<ProductDto>>("api/Products");
+
+            if (response != null)
+            {
+                products = response.AsQueryable();
+            }
+            else
+            {
+                products = new List<ProductDto>().AsQueryable();
+                Console.WriteLine("No data found.");
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Error searching data: {e.Message}");
+        }
+        finally
+        {
+            StateHasChanged();
+        }
+    }
+}

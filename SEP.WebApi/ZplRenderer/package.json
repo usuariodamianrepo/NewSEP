@@ -1,0 +1,9 @@
+{
+  "name": "sep-zpl-renderer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Process used by SEP.WebApi to render ZPL labels with zpl-renderer-js.",
+  "dependencies": {
+    "zpl-renderer-js": "5.0.0"
+  }
+}

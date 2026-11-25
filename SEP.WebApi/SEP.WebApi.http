@@ -1,0 +1,21 @@
+@SEP.WebApi_HostAddress = http://localhost:5177
+
+GET {{SEP.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{SEP.WebApi_HostAddress}}/api/products/1000/zpl-image
+Accept: image/png
+
+###
+
+GET {{SEP.WebApi_HostAddress}}/api/products/1000/zpl-image?widthMm=101.6&heightMm=152.4&dpmm=8&grayscaleOutput=true
+Accept: image/png
+
+###
+
+GET {{SEP.WebApi_HostAddress}}/api/products/1001/tpcl-image
+Accept: image/png
+
+###

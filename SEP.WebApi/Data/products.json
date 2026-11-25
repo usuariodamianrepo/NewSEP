@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1000,
+    "name": "Simple Code Empty",
+    "size": "Empty",
+    "description": "UnCHOQUE el poder de los colores con la mejor calidad posible en una bolsa de colores 2023.",
+    "price": 200.36,
+    "zplcode": "",
+    "tpclcode": ""
+  },
+  {
+    "id": 1001,
+    "name": "Prueba F1 - Toshiba",
+    "size": "F1",
+    "description": "UnCHOQUE el poder de los colores con la mejor calidad posible en una taza de colores 2023.",
+    "price": 220.00,
+    "zplcode": "^XA^FO55,32^A0N,200^FDP^FS^FO3,223^A0N,55^FB806,1,0,C^FDUSPS PRIORITY MAIL\\&^FS^XZ",
+    "tpclcode": "{D0420,0960,0420|}{C|}{U2;0130|}{D0420,0960,0420|}{AX;+000,+000,+00|}{AY;+00,0|}{PV00;0364,0034,0029,0029,04,0,00,B|}{RV00;BANQUITO PLASTICO|}{PV01;0347,0072,0029,0029,04,0,00,B|}{RV01;CON SUP ANTIDESLIZAN|}{PV02;0054,0034,0029,0029,04,0,00,B|}{RV02;BANQUITO PLASTICO|}{PV03;0037,0072,0029,0029,04,0,00,B|}{RV03;CON SUP ANTIDESLIZAN|}{PV04;0674,0034,0029,0029,04,0,00,B|}{RV04;BANQUITO PLASTICO|}{PV05;0657,0072,0029,0029,04,0,00,B|}{RV05;CON SUP ANTIDESLIZAN|}{PV06;0175,0176,0042,0042,04,0,00,B|}{RV06;1436511|}{PV07;0482,0176,0042,0042,04,0,00,B|}{RV07;1436511|}{PV08;0792,0176,0042,0042,04,0,00,B|}{RV08;1436511|}{PV09;0057,0174,0042,0042,04,0,00,B|}{RV09;C¢digo|}{PV10;0364,0174,0042,0042,04,0,00,B|}{RV10;C¢digo|}{PV11;0674,0174,0042,0042,04,0,00,B|}{RV11;C¢digo|}{PV12;0225,0224,0031,0031,03,0,00,B|}{RV12;|}{PV13;0537,0219,0031,0031,03,0,00,B|}{RV13;|}{PV14;0844,0219,0031,0031,03,0,00,B|}{RV14;|}{PV15;0078,0224,0031,0031,03,0,00,B|}{RV15;ORIGEN:|}{PV16;0393,0219,0031,0031,03,0,00,B|}{RV16;ORIGEN:|}{PV17;0701,0219,0031,0031,03,0,00,B|}{RV17;ORIGEN:|}{XB00;0071,0294,5,3,02,0,0027,+0000000000,020,1,00|}{RB00;780015544243|}{XB01;0381,0294,5,3,02,0,0027,+0000000000,020,1,00|}{RB01;780015544243|}{XB02;0690,0294,5,3,02,0,0027,+0000000000,020,1,00|}{RB02;780015544243|}{XS;I,0001,0002C4200|}{U1;0130|}"
+  },
+  {
+    "id": 1002,
+    "name": "Prueba F2 - Toshiba",
+    "size": "F2",
+    "description": "Descubre la mejor forma de emanar tu fragante con la mayor cantidad posible.",
+    "price": 151.00,
+    "zplcode": "^XA^FO50,50^ADN,36,20^FDFerrero Fragrances 10ml^FS^XZ",
+    "tpclcode": "{D0340,0760,0340|}{C|}{U2;0130|}{D0340,0760,0340|}{AX;+000,+000,+00|}{AY;+00,0|}{PV00;0133,0044,0042,0042,04,0,00,B|}{RV00;CAJA ORGANIZADORA 4.8L|}{PV01;0191,0078,0042,0042,04,0,00,B|}{RV01;CESTOS INTERIOR|}{PV02;0330,0176,0091,0091,04,0,00,B|}{RV02;24.000|}{PV03;0160,0247,0029,0029,04,0,00,B|}{RV03;24.000|}{PV04;0368,0247,0029,0029,04,0,00,B|}{RV04;CHINA|}{PV05;0050,0280,0026,0026,03,0,00,B|}{RV05;Codigo|}{PV06;0121,0280,0027,0027,04,0,00,B|}{RV06;1399462|}{PV07;0279,0280,0026,0026,03,0,00,B|}{RV07;53-99-Z-99-999|}{PV08;0279,0305,0026,0026,03,0,00,B|}{RV08;BC|}{LC;0050,0252,0646,0252,0,5|}{XB00;0660,0271,5,3,02,3,0058,+0000000000,020,1,00|}{RB00;780015534141|}{PV09;0601,0167,0036,0036,04,0,00,B|}{RV09;UN|}{PV10;0518,0280,0026,0026,03,0,00,B|}{RV10;19-11-2026|}{PV11;0279,0247,0029,0029,04,0,00,B|}{RV11;ORIGEN:|}{PV12;0050,0171,0075,0075,03,0,00,B|}{RV12;$|}{PV13;0050,0246,0026,0026,03,0,00,B|}{RV13;|}{PV14;0050,0213,0026,0026,04,0,00,B|}{RV14;PRECIO SIN IMPUESTOS|}{PV15;0299,0213,0026,0026,04,0,00,B|}{RV15;NACIONALES $|}{PV16;0474,0213,0026,0026,04,0,00,B|}{RV16;19834,71|}{XS;I,0002,0001C4200|}{U1;0130|}"
+  },
+  {
+    "id": 1003,
+    "name": "Prueba F3 - Toshiba",
+    "size": "F3",
+    "description": "UnCHOQUE el poder de los colores con la mejor calidad posible en una taza de colores 2023.",
+    "price": 220.00,
+    "zplcode": "^XA^FO55,32^A0N,200^FDP^FS^FO3,223^A0N,55^FB806,1,0,C^FDUSPS PRIORITY MAIL\\&^FS^XZ",
+    "tpclcode": "{D0680,1000,0680|}{C|}{U2;0130|}{D0680,1000,0680|}{AX;+000,+000,+00|}{AY;+00,0|}{PV00;0050,0502,0033,0033,04,0,00,B|}{RV00;|}{PV01;0050,0464,0033,0033,04,0,00,B|}{RV01;PRECIO SIN IMPUESTOS|}{PV02;0381,0464,0033,0033,04,0,00,B|}{RV02;NACIONALES $|}{PV03;0601,0464,0033,0033,04,0,00,B|}{RV03;9950,22|}{PV04;0228,0058,0052,0052,04,0,00,B|}{RV04;LED FIL BULBO A60 5W AMBAR|}{PV05;0415,0096,0052,0052,04,0,00,B|}{RV05;MACROLED|}{PV06;0050,0322,0122,0122,03,0,00,B|}{RV06;$|}{PV07;0287,0340,0198,0198,04,0,00,B|}{RV07;10.995|}{PV08;0919,0298,0033,0033,04,0,00,B|}{RV08;UN|}{PV09;0152,0502,0033,0033,04,0,00,B|}{RV09;10.995|}{PV10;0449,0502,0033,0033,04,0,00,B|}{RV10;CHINA|}{PV11;0330,0502,0033,0033,04,0,00,B|}{RV11;ORIGEN:|}{LC;0050,0516,0987,0516,0,4|}{PV12;0050,0547,0033,0033,04,0,00,B|}{RV12;Codigo:|}{PV13;0142,0547,0033,0033,04,0,00,B|}{RV13;1439053|}{PV14;0330,0547,0033,0033,03,0,00,B|}{RV14;53-99-Z-99-999|}{PV15;0050,0578,0033,0033,03,0,00,B|}{RV15;19-11-2026|}{PV16;0330,0578,0033,0033,03,0,00,B|}{RV16;0|}{PV17;0050,0604,0033,0033,03,0,00,B|}{RV17;BA|}{XB00;0604,0520,5,3,02,0,0063,+0000000000,020,1,00|}{RB00;742832557104|}{XS;I,0002,0001C4200|}{U1;0130|}"
+  },
+  {
+    "id": 1004,
+    "name": "Ferrero Fragantes 5ml",
+    "size": "Taza",
+    "description": "Descubre la mejor forma de emanar tu fragante con la mayor cantidad posible.",
+    "price": 120.00,
+    "zplcode": "^XA^FO50,50^ADN,36,20^FDFerrero Fragantes 5ml^FS^XZ",
+    "tpclcode": "{D0531,0760,0511|}{C|}{PV00;0025,0086,0026,0028,B,00,B=[Ferrero Fragantes 5ml]|}{LC;0025,0150,0735,0150,0,4|}{XB00;0100,0210,5,3,04,0,0050,+0000000000,033,0,00=211234567891|}{XS;I,0001,0002C4200|}"
+  },
+  {
+    "id": 1005,
+    "name": "Ferrero Sables 250g",
+    "size": "Bolsa",
+    "description": "Mejor calidad para your skin y your nails con tamaños específicos y sabores de sabores.",
+    "price": 250.00,
+    "zplcode": "^XA^FO50,50^ADN,36,20^FDFerrero Sables 250g^FS^XZ",
+    "tpclcode": "{D0531,0760,0511|}{C|}{PV00;0025,0086,0026,0028,B,00,B=[Ferrero Sables 250g]|}{LC;0025,0150,0735,0150,0,4|}{XB00;0100,0210,5,3,04,0,0050,+0000000000,033,0,00=211234567891|}{XS;I,0001,0002C4200|}"
+  },
+  {
+    "id": 1006,
+    "name": "Prueba F2 - Zebra",
+    "size": "F2",
+    "description": "Descubre el poder del your fragante con la mejor calidad posible en una taza de fragantes 20ml.",
+    "price": 170.30,
+    "zplcode": "^XA^CWJ,E:HEL000.FNT^FS^CWK,E:HEL001.FNT^FS^JMA^FO16,24^A@N,33,24,E:HEL000.FNT^FB584,2,0,C,0^FH\\^FDALFOMBRA A\\FADESL TRIANGULO 40X60CM^FS^FO48,80^A0N,81,95^FB416,2,0,C,0^FH\\^FD 19\\2E900^FS^FO0,184^A@N,26,19,E:HEL000.FNT^FB80,2,0,L,0^FH\\^FDC\\A2digo^FS^FO72,184^A@N,26,19,E:HEL000.FNT^FB104,2,0,L,0^FH\\^FD1496256^FS^FO216,224^A@N,23,16,E:HEL000.FNT^FB160,2,0,L,0^FH\\^FD53\\FA99\\FAZ\\FA99\\FA999^FS^FO0,208^BY2,118^BEN,32,Y,N,Y^FD7709097007314^FS^FO544,112^A@N,28,20,E:HEL000.FNT^FB48,2,0,L,0^FH\\^FDUN^FS^FO368,224^A@N,23,16,E:HEL000.FNT^FB128,2,0,L,0^FH\\^FD01\\FA10\\FA2025^FS^FO0,104^A@N,73,53,E:HEL001.FNT^FB56,2,0,L,0^FH\\^FD^FS^FO496,160^A@N,26,19,E:HEL000.FNT^FB80,2,0,L,0^FH\\^FD^FS^FO528,160^A@N,26,19,E:HEL000.FNT^FB96,2,0,L,0^FH\\^FDA:^FS^FO496,184^A@N,26,19,E:HEL000.FNT^FB152,2,0,L,0^FH\\^FD0^FS^FO464,184^A@N,20,15,E:HEL000.FNT^FB152,2,0,L,0^FH\\^FD^FS^XZ",
+    "tpclcode": "{D0531,0760,0511|}{C|}{PV00;0025,0086,0026,0028,B,00,B=[Ferrero Fragantes 20ml]|}{LC;0025,0150,0735,0150,0,4|}{XB00;0100,0210,5,3,04,0,0050,+0000000000,033,0,00=211234567891|}{XS;I,0001,0002C4200|}"
+  },
+  {
+    "id": 1007,
+    "name": "Ferrero Scolta 500g",
+    "size": "Bolsa",
+    "description": "Mejor calidad para your skin y your nails con tamaños específicos y sabores de sabores.",
+    "price": 302.25,
+    "zplcode": "^XA^FO50,50^ADN,36,20^FDFerrero Scolta 500g^FS^XZ",
+    "tpclcode": "{D0531,0760,0511|}{C|}{PV00;0025,0086,0026,0028,B,00,B=[Ferrero Scolta 500g]|}{LC;0025,0150,0735,0150,0,4|}{XB00;0100,0210,5,3,04,0,0050,+0000000000,033,0,00=211234567891|}{XS;I,0001,0002C4200|}"
+  },
+  {
+    "id": 1008,
+    "name": "Ferrero Fragantes 75ml",
+    "size": "Taza",
+    "description": "Descubre el poder del your fragante con la mejor calidad posible en una taza de fragantes 75ml.",
+    "price": 230.00,
+    "zplcode": "^XA^FO50,50^ADN,36,20^FDFerrero Fragantes 75ml^FS^XZ",
+    "tpclcode": "{D0531,0760,0511|}{C|}{PV00;0025,0086,0026,0028,B,00,B=[Ferrero Fragantes 75ml]|}{LC;0025,0150,0735,0150,0,4|}{XB00;0100,0210,5,3,04,0,0050,+0000000000,033,0,00=211234567891|}{XS;I,0001,0002C4200|}"
+  },
+  {
+    "id": 1009,
+    "name": "Ferrero Sables 1L",
+    "size": "Bolsa",
+    "description": "Mejor calidad para your skin y your nails con tamaños específicos y sabores de sabores.",
+    "price": 400.00,
+    "zplcode": "^XA^FO50,50^ADN,36,20^FDFerrero Sables 1L^FS^XZ",
+    "tpclcode": "{D0531,0760,0511|}{C|}{PV00;0025,0086,0026,0028,B,00,B=[Ferrero Sables 1L]|}{LC;0025,0150,0735,0150,0,4|}{XB00;0100,0210,5,3,04,0,0050,+0000000000,033,0,00=211234567891|}{XS;I,0001,0002C4200|}"
+  },
+  {
+    "id": 1010,
+    "name": "Ferrero Fragantes 1L",
+    "size": "Taza",
+    "description": "Descubre el poder del your fragante con la mejor calidad posible en una taza de fragantes 1L.",
+    "price": 350.00,
+    "zplcode": "^XA^CWJ,E:HEL000.FNT^FS^CWK,E:HEL001.FNT^FS^JMA^FO32,16^A@N,41,30,E:HEL000.FNT^FB704,2,0,C,0^FH\\^FD^FS^FO8,152^A@N,118,85,E:HEL001.FNT^FB168,2,0,L,0^FH\\^FD^FS^FO96,112^A0N,96,112^FB608,2,0,C,0^FH\\^FD 0^FS^FO712,192^A@N,31,22,E:HEL000.FNT^FB160,2,0,L,0^FH\\^FD^FS^FO0,432^A@N,33,24,E:HEL001.FNT^FB80,2,0,L,0^FH\\^FDC\\A2digo^FS^FO72,432^A@N,33,24,E:HEL001.FNT^FB152,2,0,L,0^FH\\^FD^FS^FO280,432^A@N,26,19,E:HEL001.FNT^FB208,2,0,L,0^FH\\^FD^FS^FO0,472^A@N,26,19,E:HEL001.FNT^FB160,2,0,L,0^FH\\^FD03\\FA10\\FA2025^FS^FO568,424^BY2,118^BEN,48,Y,N,Y^FD0000000000000^FS^FO0,336^A@N,71,51,E:HEL000.FNT^FB120,2,0,L,0^FH\\^FD^FS^FO128,336^A@N,71,51,E:HEL000.FNT^FB64,2,0,L,0^FH\\^FDA:^FS^FO280,336^A@N,65,47,E:HEL000.FNT^FB608,2,0,L,0^FH\\^FD^FS^FO216,336^A@N,71,51,E:HEL001.FNT^FB48,2,0,L,0^FH\\^FD^FS^XZ",
+    "tpclcode": ""
+  }
+]
