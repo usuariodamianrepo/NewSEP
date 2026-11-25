@@ -14,6 +14,10 @@ builder.Services.AddHttpClient("SystemApiClient", client =>
 {
     client.BaseAddress = new Uri("https://localhost:7015/");
 });
+builder.Services.AddHttpClient("EtikitApiClient", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7049/");
+});
 builder.Services.AddScoped<GetHttpClient>();
 builder.Services.AddFluentUIComponents();
 

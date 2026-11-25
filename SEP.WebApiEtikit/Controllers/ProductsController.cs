@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using SEP.Shared.DTOs;
+using SEP.WebApiEtikit.Labeling;
 
 namespace SEP.WebApiEtikit.Controllers
 {
@@ -14,10 +15,12 @@ namespace SEP.WebApiEtikit.Controllers
         };
 
         private readonly ILogger<ProductsController> _logger;
+        private readonly ILabelSvgService _svgService;
 
-        public ProductsController(ILogger<ProductsController> logger)
+        public ProductsController(ILogger<ProductsController> logger, ILabelSvgService svgService)
         {
             _logger = logger;
+            _svgService = svgService;
         }
 
         [HttpGet]
@@ -62,20 +65,32 @@ namespace SEP.WebApiEtikit.Controllers
 
             if (string.IsNullOrWhiteSpace(product.ZplCode))
             {
-                return BadRequest("El producto no tiene código ZPL.");
+                return ErrorResult(StatusCodes.Status400BadRequest, "El producto no tiene código ZPL.");
             }
 
             try
             {
-                //TODO: Implementar el render de la imagen para product.ZplCode
+                cancellationToken.ThrowIfCancellationRequested();
 
-                return File(png, "image/png");
+                var svg = _svgService.RenderZpl(product.ZplCode);
+
+                return Content(svg, "image/svg+xml; charset=utf-8");
+            }
+            catch (Exception ex) when (ex is LabelParseException or LabelRenderException)
+            {
+                _logger.LogError(ex, "No se pudo interpretar el ZPL del producto {ProductId}.", id);
+
+                return ErrorResult(
+                    StatusCodes.Status422UnprocessableEntity,
+                    "No se pudo interpretar el código ZPL de la etiqueta.");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "No se pudo renderizar la etiqueta del producto {ProductId}.", id);
 
-                return StatusCode(StatusCodes.Status502BadGateway, "No se pudo generar la imagen de la etiqueta.");
+                return ErrorResult(
+                    StatusCodes.Status500InternalServerError,
+                    "No se pudo generar la imagen SVG de la etiqueta.");
             }
         }
 
@@ -94,21 +109,42 @@ namespace SEP.WebApiEtikit.Controllers
 
             if (string.IsNullOrWhiteSpace(product.TpclCode))
             {
-                return BadRequest("El producto no tiene código TPCL.");
+                return ErrorResult(StatusCodes.Status400BadRequest, "El producto no tiene código TPCL.");
             }
 
             try
             {
-                //TODO: Implementar el render de la imagen para product.TpclCode
-                return File(png, "image/png");
+                cancellationToken.ThrowIfCancellationRequested();
+
+                var svg = _svgService.RenderTpcl(product.TpclCode);
+
+                return Content(svg, "image/svg+xml; charset=utf-8");
+            }
+            catch (Exception ex) when (ex is LabelParseException or LabelRenderException)
+            {
+                _logger.LogError(ex, "No se pudo interpretar el TPCL del producto {ProductId}.", id);
+
+                return ErrorResult(
+                    StatusCodes.Status422UnprocessableEntity,
+                    "No se pudo interpretar el código TPCL de la etiqueta.");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "No se pudo generar la imagen TPCL del producto {ProductId}.", id);
 
-                return StatusCode(StatusCodes.Status502BadGateway, "No se pudo generar la imagen de la etiqueta.");
+                return ErrorResult(
+                    StatusCodes.Status500InternalServerError,
+                    "No se pudo generar la imagen SVG de la etiqueta.");
             }
         }
+
+        private static IActionResult ErrorResult(int statusCode, string message) =>
+            new ContentResult
+            {
+                StatusCode = statusCode,
+                Content = message,
+                ContentType = "text/plain; charset=utf-8"
+            };
 
         private static async Task<List<Product>> ReadProductsAsync()
         {

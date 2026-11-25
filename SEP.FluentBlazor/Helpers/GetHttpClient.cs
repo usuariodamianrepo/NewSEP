@@ -14,5 +14,11 @@
             var client = httpClientFactory.CreateClient("SystemApiClient");
             return client;
         }
+
+        public HttpClient GetEtikitHttpClient()
+        {
+            var client = httpClientFactory.CreateClient("EtikitApiClient");
+            return client;
+        }
     }
 }

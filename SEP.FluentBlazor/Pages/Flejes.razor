@@ -43,13 +43,13 @@ else
     {
         Console.WriteLine($"Id: {item.Id} Label: {item.Name}");
 
-        var httpClient = HttpClientFactory.GetPublicHttpClient();
+        var httpClient = HttpClientFactory.GetEtikitHttpClient();
         var response = await httpClient.GetAsync($"api/Products/{item.Id}/zpl-image");
         response.EnsureSuccessStatusCode();
 
         var bytes = await response.Content.ReadAsByteArrayAsync();
         var base64 = Convert.ToBase64String(bytes);
-        var imgSrc = $"data:image/png;base64,{base64}";
+        var imgSrc = $"data:image/svg+xml;base64,{base64}";
 
         var result = await DialogService.ShowDialogAsync<FlejeDialog>(options =>
             {
@@ -71,13 +71,13 @@ else
     private async void OnToshibaCode(ProductDto item)
     {
         Console.WriteLine($"Id: {item.Id} Label: {item.Name}");
-        var httpClient = HttpClientFactory.GetPublicHttpClient();
+        var httpClient = HttpClientFactory.GetEtikitHttpClient();
         var response = await httpClient.GetAsync($"api/Products/{item.Id}/tpcl-image");
         response.EnsureSuccessStatusCode();
 
         var bytes = await response.Content.ReadAsByteArrayAsync();
         var base64 = Convert.ToBase64String(bytes);
-        var imgSrc = $"data:image/png;base64,{base64}";
+        var imgSrc = $"data:image/svg+xml;base64,{base64}";
 
         var result = await DialogService.ShowDialogAsync<FlejeDialog>(options =>
             {
@@ -99,7 +99,7 @@ else
     {
         try
         {
-            var httpClient = HttpClientFactory.GetPublicHttpClient();
+            var httpClient = HttpClientFactory.GetEtikitHttpClient();
             var response = await httpClient.GetFromJsonAsync<IEnumerable<ProductDto>>("api/Products");
 
             if (response != null)

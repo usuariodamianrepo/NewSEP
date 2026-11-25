@@ -1,6 +1,26 @@
 @SEP.WebApiEtikit_HostAddress = http://localhost:5231
 
-GET {{SEP.WebApiEtikit_HostAddress}}/weatherforecast/
+GET {{SEP.WebApiEtikit_HostAddress}}/api/products
 Accept: application/json
+
+###
+GET {{SEP.WebApiEtikit_HostAddress}}/api/products/1001/zpl-image
+Accept: image/svg+xml
+
+###
+GET {{SEP.WebApiEtikit_HostAddress}}/api/products/1001/tpcl-image
+Accept: image/svg+xml
+
+###
+GET {{SEP.WebApiEtikit_HostAddress}}/api/products/1006/zpl-image
+Accept: image/svg+xml
+
+###
+GET {{SEP.WebApiEtikit_HostAddress}}/api/products/1002/tpcl-image
+Accept: image/svg+xml
+
+###
+GET {{SEP.WebApiEtikit_HostAddress}}/api/products/1000/zpl-image
+Accept: text/plain
 
 ###
