@@ -2,4 +2,5 @@
   <Project Path="SEP.FluentBlazor/SEP.FluentBlazor.csproj" Id="c4c7b192-5f6e-42e0-830a-a4a3e2929b33" />
   <Project Path="SEP.Shared/SEP.Shared.csproj" Id="d6355ecf-7f8b-4de7-94bb-639a13572c09" />
   <Project Path="SEP.WebApi/SEP.WebApi.csproj" />
+  <Project Path="SEP.WebApiEtikit/SEP.WebApiEtikit.csproj" Id="9b045f8a-f682-4eff-915b-c58db144a653" />
 </Solution>

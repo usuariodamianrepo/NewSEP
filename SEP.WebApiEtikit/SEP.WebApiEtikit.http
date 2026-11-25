@@ -1,0 +1,6 @@
+@SEP.WebApiEtikit_HostAddress = http://localhost:5231
+
+GET {{SEP.WebApiEtikit_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
