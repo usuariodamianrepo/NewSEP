@@ -1,0 +1,57 @@
+{
+  "name": "test_ZPL_1",
+  "width": 102,
+  "height": 76,
+  "elements": [
+    {
+      "id": "8izhhkjdo",
+      "type": "barcode",
+      "x": 756,
+      "y": 108,
+      "rotation": 1,
+      "content": "12345678",
+      "barcodeType": "code128",
+      "height": 110,
+      "width": 2
+    },
+    {
+      "id": "3x27whg3v",
+      "type": "line",
+      "x": 22,
+      "y": 396,
+      "rotation": 0,
+      "x2": 719.2913385826772,
+      "y2": 396,
+      "thickness": 3
+    },
+    {
+      "id": "kxr8o9e88",
+      "type": "text",
+      "x": 34,
+      "y": 358,
+      "rotation": 0,
+      "content": "Esta es la radiografía que hace el piloto",
+      "fontCode": "0",
+      "width": 39,
+      "height": 39
+    },
+    {
+      "id": "51n5hoxe0",
+      "type": "qrcode",
+      "x": 38,
+      "y": 54,
+      "rotation": 0,
+      "content": "12345678",
+      "size": 10,
+      "errorCorrection": "H",
+      "qrModel": "M1"
+    }
+  ],
+  "printSettings": {
+    "quantity": 1,
+    "speed": 3,
+    "darkness": 10,
+    "dpi": 203
+  },
+  "protocol": "zpl"
+}

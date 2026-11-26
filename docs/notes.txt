@@ -26,4 +26,11 @@ Si me indicas el modelo exacto de tu impresora Toshiba Tec o si buscas automatiz
 
 https://zplcloud.com/
 
+============árboles de sintaxis abstracta (AST)=======================================
+Yo evitaría intentar mantener un diccionario ZPL ↔ TPCL completo de forma manual. Es un problema que normalmente nunca termina porque:
 
+ZPL tiene cientos de comandos, parámetros y variaciones según firmware.
+TPCL (TSC Printer Command Language) también tiene diferencias entre modelos.
+Hay comandos equivalentes 1:1, otros 1:n y otros directamente sin equivalente.
+
+Mi recomendación es cambiar el enfoque de "traductor por diccionario" a un motor intermedio de representación.

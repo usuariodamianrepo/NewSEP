@@ -28,3 +28,12 @@ ZPL   ---------/
 - El preview queda desacoplado de la impresora.
 
 ## Opción 2: Completar el diccionario por frecuencia de uso
+
+
+^XA
+^FO250, 70^ADN, 11, 7^FD CORPORACION TECTRONIC SA de CV^FS
+^FO320, 105^ADN, 11, 7^FD Prueba 1 ^FS
+^FO30, 150^ADN, 11, 7^FD Texto de muestra 1 ^FS
+^FO350, 200^ADN, 11, 7
+^BCN, 80, Y, Y, N^FD corptectr>147896325 ^FS
+^XZ 
